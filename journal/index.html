@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Journal</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Entry point -->
+    <app></app>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyCux8ZUOPibGdO84IXuZPRGRKErwi-Llug",
+    authDomain: "journal-web-app.firebaseapp.com",
+    databaseURL: "https://journal-web-app.firebaseio.com",
+    projectId: "journal-web-app",
+    storageBucket: "",
+    messagingSenderId: "868048924700"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    </script>
+
+    <script src="./tags/app.tag" type="riot/tag"></script>
+    <script src="./tags/item.tag" type="riot/tag"></script>
+    <script src="./tags/text-editor.tag" type="riot/tag"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/riot@3.10.3/riot+compiler.min.js"></script>
+    <script>
+      riot.mount('*');
+    </script>
+  </body>
+</html>

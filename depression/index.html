@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat|Playfair+Display" rel="stylesheet">
+  <title>Nutrition</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Depression Group</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <app></app>
+  <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright by Depression Group (Yiran Du, Ming Luo, Yiting Cai, Wanqiu Zhu):
+    </div>
+</body>
+
+</html>
+<style>
+  body {
+    background-color: smokewhite;
+
+  }
+
+  .header {
+    background-color: #333;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 6rem;
+  }
+
+  /*.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem 0;
+  }
+
+  li {
+    color: smokewhite;
+    font-family: Montserrat;
+  }*/
+  .footer { /*why it does not work...*/
+    color: #fff;
+	  font-size: 14px;
+	  height: 80px;
+	  line-height: 80px;
+	  margin: 0;
+  }
+</style>
+
+<script src="tags/app.tag" type="riot/tag"></script>
+<script src="tags/foodpage.tag" type="riot/tag"></script>
+<script src="tags/fooditem.tag" type="riot/tag"></script>
+<script src="tags/menu.tag" type="riot/tag"></script>
+<script src="tags/cuisine.tag" type="riot/tag"></script>
+<script src="tags/addmenu.tag" type="riot/tag"></script>
+
+<script src="https://cdn.jsdelivr.net/riot/3.1/riot+compiler.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyArb04-kkBQ1Uvyl7z6zwCgK7WB-Qrp4jo",
+    authDomain: "mstu5013-final-project.firebaseapp.com",
+    databaseURL: "https://mstu5013-final-project.firebaseio.com",
+    projectId: "mstu5013-final-project",
+    storageBucket: "mstu5013-final-project.appspot.com",
+    messagingSenderId: "939854185114"
+  };
+  firebase.initializeApp(config);
+
+  // Global Cached -> Most useful Firebase refs accessible anywhere.
+  var database = firebase.database();
+  var observable = riot.observable();
+
+  // Initialize Riot
+  riot.mount('*');
+</script>
